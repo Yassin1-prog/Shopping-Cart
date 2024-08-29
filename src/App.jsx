@@ -1,5 +1,5 @@
 import "./App.css";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStore,
@@ -21,37 +21,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="product">Products</Link>
+              <Link to="shop">Products</Link>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="main">
-        <div className="motto">
-          <div>Where shopping</div>{" "}
-          <div>
-            meets <span>JOY</span>
-          </div>
-          <button className="shop">SHOP NOW</button>
-        </div>
-      </div>
-      <div className="overview">
-        <div className="title">Find Everything You Need</div>
-        <div className="content">
-          <div>
-            <h2>Clothes</h2>
-            <img src="https://images.pexels.com/photos/297933/pexels-photo-297933.jpeg?auto=compress&cs=tinysrgb&w=600" />
-          </div>
-          <div>
-            <h2>Accessories</h2>
-            <img src="https://images.pexels.com/photos/354103/pexels-photo-354103.jpeg?auto=compress&cs=tinysrgb&w=600" />
-          </div>
-          <div>
-            <h2>Electronics</h2>
-            <img src="https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=600" />
-          </div>
-        </div>
-      </div>
+
+      <Outlet />
+
       <div className="footer">
         <div className="about">
           <h2>About</h2>

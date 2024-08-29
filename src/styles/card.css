@@ -1,0 +1,43 @@
+.card {
+  font-family: "Montserrat", sans-serif;
+  padding: 50px;
+  width: max(500px, 25vh);
+}
+
+.card > div {
+  margin: 10px;
+}
+
+.product {
+  width: min(20vh, 300px);
+  max-height: 400px;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.itemTitle {
+  font-weight: 500;
+  font-size: clamp(14px, 18px, 22px);
+  width: 50%;
+}
+
+.price {
+  font-weight: 800;
+  font-size: clamp(15px, 20px, 22px);
+}
+
+.critics {
+  margin-left: 10px;
+  color: gray;
+}
+
+.star {
+  font-weight: 500;
+  font-size: clamp(14px, 18px, 22px);
+  color: black;
+}
+
+.emoji {
+  color: yellow;
+  font-size: clamp(16px, 20px, 22px);
+}
