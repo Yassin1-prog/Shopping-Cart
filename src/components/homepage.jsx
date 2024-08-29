@@ -1,6 +1,13 @@
 import "../styles/homepage.css";
+import { useNavigate } from "react-router-dom";
 
-function App() {
+function Homepage() {
+  const navigate = useNavigate();
+
+  const startShopping = () => {
+    navigate("/shop");
+  };
+
   return (
     <>
       <div className="main">
@@ -9,7 +16,9 @@ function App() {
           <div>
             meets <span>JOY</span>
           </div>
-          <button className="shop">SHOP NOW</button>
+          <button className="shop" onClick={startShopping}>
+            SHOP NOW
+          </button>
         </div>
       </div>
       <div className="overview">
@@ -33,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Homepage;

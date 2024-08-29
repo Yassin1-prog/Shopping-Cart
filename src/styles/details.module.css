@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  padding: 50px;
+  width: 100%;
+  background-color: white;
+}
+
+.image {
+  width: 50vh;
+}
+
+.product {
+  width: 80vh;
+  max-height: 400px;
+  margin-right: 50px;
+}
+
+.content {
+  margin: 50px 0px;
+}
+
+.itemTitle {
+  font-weight: 500;
+  font-size: clamp(14px, 18px, 22px);
+  width: 50%;
+}
+
+.rating {
+  margin-bottom: 20px;
+}
+
+.price {
+  font-weight: 800;
+  font-size: clamp(15px, 20px, 22px);
+  margin-bottom: 5px;
+}
+
+.critics {
+  margin-left: 10px;
+  color: gray;
+}
+
+.star {
+  font-weight: 500;
+  font-size: clamp(14px, 18px, 22px);
+  color: black;
+}
+
+.emoji {
+  color: yellow;
+  font-size: clamp(16px, 20px, 22px);
+}
+
+.descr {
+  max-width: clamp(150px, 80vh, 800px);
+  word-spacing: 5px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.add,
+.back {
+  color: ivory;
+  background-color: black;
+  padding: 5px 20px;
+  font-size: clamp(12px, 18px, 22px);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.add:hover,
+.back:hover {
+  opacity: 80%;
+}
+
+.cart {
+  margin-right: 10px;
+  color: white;
+}
+
+.arrow {
+  font-size: clamp(12px, 18px, 22px);
+}

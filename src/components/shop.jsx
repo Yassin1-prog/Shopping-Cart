@@ -1,10 +1,12 @@
 import "../styles/shop.css";
 import { useState, useEffect } from "react";
 import Product from "./product.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Shop() {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchItems() {
@@ -23,6 +25,10 @@ export default function Shop() {
     fetchItems();
   }, []);
 
+  const itemDetails = (product) => {
+    navigate(`/productDetails/${product.id}`, { state: { product } });
+  };
+
   return (
     <>
       {loading ? (
@@ -30,7 +36,7 @@ export default function Shop() {
       ) : (
         <div className="store">
           {items.map((item) => (
-            <Product item={item} key={item.id} />
+            <Product item={item} toDetails={itemDetails} key={item.id} />
           ))}
         </div>
       )}

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "../styles/card.css";
+import "../styles/product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 /*
@@ -14,9 +14,9 @@ const item = {
   title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
 };
 */
-export default function Product({ item }) {
+export default function Product({ item, toDetails }) {
   return (
-    <div className="card">
+    <div className="card" onClick={() => toDetails(item)}>
       <img src={item.image} className="product" />
       <div className="itemTitle">{item.title}</div>
       <div className="rating">
