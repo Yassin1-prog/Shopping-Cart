@@ -1,6 +1,7 @@
 import "../styles/shop.css";
 import { useState, useEffect } from "react";
 import Product from "./product.jsx";
+import LoadingSpinner from "./loadingspinner.jsx";
 import { useNavigate } from "react-router-dom";
 
 export default function Shop() {
@@ -32,7 +33,9 @@ export default function Shop() {
   return (
     <>
       {loading ? (
-        <div>Loading...</div>
+        <div className="loading">
+          <LoadingSpinner />
+        </div>
       ) : (
         <div className="store">
           {items.map((item) => (

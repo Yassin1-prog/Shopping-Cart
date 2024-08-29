@@ -14,6 +14,13 @@ ul {
 
 li {
   display: inline;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(14px, 18px, 20px);
+  margin: 0px 10px;
+}
+
+li:hover {
+  opacity: 80%;
 }
 
 a {
@@ -22,9 +29,27 @@ a {
   padding: 5px;
 }
 
+.carting {
+  color: lightcoral;
+  margin-left: 5px;
+  font-size: 22px;
+}
+
+.fakecarting {
+  display: inline;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   color: white;
+}
+
+.page {
+  transition: all 0.3s ease;
+}
+
+.page:hover {
+  transform: translateY(-5px);
 }
 
 .header {

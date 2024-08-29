@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import Shop from "./components/shop.jsx";
 import Homepage from "./components/homepage.jsx";
 import Item from "./components/productDetails.jsx";
+import Cart from "./components/cart.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { index: true, element: <Homepage /> },
       { path: "shop", element: <Shop /> },
       { path: "productDetails/:id", element: <Item /> },
+      { path: "MYcart", element: <Cart /> },
     ],
   },
 ]);

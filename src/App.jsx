@@ -1,20 +1,35 @@
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faStore,
   faPhone,
   faEnvelope,
+  faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
+  const [purchased, setPurchased] = useState([]);
+  const navigate = useNavigate();
+
+  const checkCart = () => {
+    navigate("/MYcart");
+  };
+
+  const remainHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className="header">
-        <h1>
-          <FontAwesomeIcon icon={faStore} className="logo" />
-          ShopNook
-        </h1>
+        <div className="page" onClick={remainHome}>
+          <h1>
+            <FontAwesomeIcon icon={faStore} className="logo" />
+            ShopNook
+          </h1>
+        </div>
         <nav>
           <ul>
             <li>
@@ -23,11 +38,16 @@ function App() {
             <li>
               <Link to="shop">Products</Link>
             </li>
+            <li>
+              <div className="fakecarting" onClick={checkCart}>
+                <FontAwesomeIcon icon={faCartShopping} className="carting" />
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
 
-      <Outlet />
+      <Outlet context={[purchased, setPurchased]} />
 
       <div className="footer">
         <div className="about">

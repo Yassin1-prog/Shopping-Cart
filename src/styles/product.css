@@ -1,7 +1,14 @@
 .card {
   font-family: "Montserrat", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   padding: 50px;
-  width: max(500px, 25vh);
+  width: clamp(100px, 25vh, 500px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card > div {
@@ -17,8 +24,8 @@
 
 .itemTitle {
   font-weight: 500;
-  font-size: clamp(14px, 18px, 22px);
-  width: 50%;
+  font-size: clamp(14px, 16px, 20px);
+  width: 100%;
 }
 
 .price {
