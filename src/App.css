@@ -68,6 +68,10 @@ h1 {
 .header {
   padding: 20px;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   justify-content: space-between;
   align-items: center;
   background-color: black;

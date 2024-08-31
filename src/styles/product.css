@@ -4,7 +4,7 @@
   transition: all 0.3s ease;
   padding: 50px;
   width: clamp(100px, 25vh, 500px);
-  height: clamp(200px, 350px, 600px);
+  height: clamp(200px, 350px, 500px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,9 +22,9 @@
 
 .product {
   width: min(20vh, 300px);
-  max-height: 300px;
-  object-fit: contain;
   margin: 10px;
+  object-fit: contain;
+  height: 200px;
   flex-grow: 1;
 }
 

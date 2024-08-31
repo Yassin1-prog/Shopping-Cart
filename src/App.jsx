@@ -1,5 +1,5 @@
 import "./App.css";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate, ScrollRestoration } from "react-router-dom";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+      <ScrollRestoration />
       <div className="header">
         <div className="page" onClick={remainHome}>
           <h1>
