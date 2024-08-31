@@ -37,11 +37,14 @@ span {
   justify-self: center;
   align-self: center;
   width: clamp(50px, 200px, 400px);
+  transition: all 0.3s ease;
 }
 
 .shop:hover {
   background-color: black;
   color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .overview {
@@ -78,7 +81,7 @@ span {
   align-items: center;
 }
 
-img {
+.imgg {
   max-width: 400px;
   max-height: 600px;
   object-fit: contain;

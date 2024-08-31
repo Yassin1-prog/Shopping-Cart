@@ -21,6 +21,8 @@ function App() {
     navigate("/");
   };
 
+  const nbrItems = purchased.reduce((acc, product) => acc + product.number, 0);
+
   return (
     <>
       <div className="header">
@@ -41,6 +43,7 @@ function App() {
             <li>
               <div className="fakecarting" onClick={checkCart}>
                 <FontAwesomeIcon icon={faCartShopping} className="carting" />
+                <p className="nbrItems">{nbrItems}</p>
               </div>
             </li>
           </ul>
@@ -65,11 +68,11 @@ function App() {
         <div className="info">
           <h2>Contact Us</h2>
           <div>
-            <FontAwesomeIcon icon={faPhone} />
+            <FontAwesomeIcon icon={faPhone} className="emz" />
             5113-769-832
           </div>
           <div>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} className="emz" />
             shopnooksupp882@gmail.com
           </div>
         </div>

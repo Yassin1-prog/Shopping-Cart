@@ -5,6 +5,7 @@
   padding: 50px;
   width: 100%;
   background-color: white;
+  margin-bottom: 50vh;
 }
 
 .image {
@@ -12,7 +13,7 @@
 }
 
 .product {
-  width: 80vh;
+  /*width: 80vh;*/
   max-height: 400px;
   margin-right: 50px;
 }
