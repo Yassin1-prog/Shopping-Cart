@@ -50,9 +50,7 @@ function App() {
           </ul>
         </nav>
       </div>
-
       <Outlet context={[purchased, setPurchased]} />
-
       <div className="footer">
         <div className="about">
           <h2>About</h2>

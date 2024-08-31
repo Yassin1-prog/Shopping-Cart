@@ -86,3 +86,26 @@ span {
   max-height: 600px;
   object-fit: contain;
 }
+
+@media (max-width: 1300px) {
+  .imgg {
+    max-width: 200px;
+    max-height: 400px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .imgg {
+    max-width: 150px;
+    max-height: 300px;
+    object-fit: contain;
+  }
+}
