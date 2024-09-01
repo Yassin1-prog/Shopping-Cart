@@ -83,7 +83,7 @@ export default function Shop() {
   return (
     <>
       {loading ? (
-        <div className="loading">
+        <div className="loading" data-testid="loading-spinner">
           <LoadingSpinner />
         </div>
       ) : (

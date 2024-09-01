@@ -25,6 +25,7 @@ function App() {
 
   return (
     <>
+      {/* should be commented out when running the tests */}
       <ScrollRestoration />
       <div className="header">
         <div className="page" onClick={remainHome}>
@@ -42,7 +43,11 @@ function App() {
               <Link to="shop">Products</Link>
             </li>
             <li>
-              <div className="fakecarting" onClick={checkCart}>
+              <div
+                className="fakecarting"
+                data-testid="cart-icon"
+                onClick={checkCart}
+              >
                 <FontAwesomeIcon icon={faCartShopping} className="carting" />
                 <p className="nbrItems">{nbrItems}</p>
               </div>
